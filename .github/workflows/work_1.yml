@@ -1,11 +1,18 @@
 # Este es un archivo de flujo de trabajo de GitHub Actions (work_1.yml)
 # Aquí puedes definir los jobs y pasos para automatizar tareas en tu repositorio.
 
-name: Work 1 Andy
-on: [push]
+name: Work 2 Andy
+on:
+  push:
+    branches:
+      - test_1
 jobs: 
     build:
         runs-on: ubuntu-latest
         steps:
-        - name: Print Something
-          run: echo "Hola Pitaya!"
+        - name: impresion1
+          run: echo "Impresión 1!"
+        - name: impresion2
+          run: echo "Impresión 2!"
+        - name: impresion3
+          run: echo "Impresión 1!"
