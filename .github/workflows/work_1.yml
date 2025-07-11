@@ -1,7 +1,7 @@
 # Este es un archivo de flujo de trabajo de GitHub Actions (work_1.yml)
 # Aquí puedes definir los jobs y pasos para automatizar tareas en tu repositorio.
 
-name: Work 2 Andy
+name: my-sql-test
 on:
   push:
     branches:
@@ -9,9 +9,13 @@ on:
 jobs: 
     build:
         runs-on: ubuntu-latest
+        container: mysql:latest
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: test_db
         steps:
         - name: impresion1
-          run: echo "Impresión 1!"
+          run: echo "Hola holaaa, soy Andy!"
         - name: impresion2
           run: echo "Impresión 2!"
         - name: impresion3
